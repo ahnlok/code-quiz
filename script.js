@@ -137,6 +137,32 @@ function allDone(){
     questionDiv.appendChild(makeInput);
 
     //Submit
-    
+    var makeSubmit = document.createElement("button");
+    makeSubmit.setAttribute("type", "submit");
+    makeSubmit.setAttribute("id", "Submit");
+    makeSubmit.textContent = "Submit";
 
+    questionDiv.appendChild(makeSubmit);
+
+    makeSubmit.addEventListener("click", function(){
+        var initials = makeInput.value;
+        if(initial === null){
+        } else{
+            var yourScore = {
+                initials: initials,
+                score: remainingTime
+            }
+            var listScore = localStorage.getItem("listScore");
+            if (listScore === null){
+                listScore = [];
+            } else{
+                listScore = JSON.parse(listScore);
+            }
+            listScore.push(yourScore);
+            var newScore = JSON.stringify(listScore);
+            localStorage.setItem("listScore", newScore);
+            
+            window.location.replace("./highscore.html");
+        }
+    });
 }
