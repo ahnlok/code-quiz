@@ -34,3 +34,8 @@ var currentTime = document.querySelector("#time-left");
 var Timer = document.querySelector("#buttonstart");
 var questionDiv = document.querySelector("#questions");
 var wrapper = document.querySelector("#wrapper");
+
+var timeLeft = 60;
+var holdInterval = 0;
+var punish = 5;
+var createUl = document.createElement("ul");
