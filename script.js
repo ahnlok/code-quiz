@@ -121,5 +121,13 @@ function allDone(){
         userP.textContent = "The final score: " + remainingTime;
         questionDiv.appendChild(userP2);
     }
+    //Label
+    var createLabel = document.createElement("label");
+    createLabel.setAttribute("id", "createLabel");
+    createLabel.textContent = "Enter desired initials to be listed: ";
+
+    questionDiv.appendChild(createLabel);
+
+    
 
 }
