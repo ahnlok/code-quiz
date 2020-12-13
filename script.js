@@ -89,4 +89,37 @@ function compare(event){
             createDiv.textContent = "You are wrong, the correct answer is: " + questions[questionList].answer;
         }
     }
+    questionList++;
+    if (questionList >= questions.length){
+        allDone();
+        createDiv.textContent = "You are done" + "" + "Your score is " + score +"/" + questions.length + "Correct";
+    } else{
+        render(questionList);
+    }
+    questionDiv.appendChild(createDiv);
+}
+//This function will append last page
+function allDone(){
+    questionDiv.innerHTML = "";
+    currentTime.innerHTML = "";
+
+    var userH1 = document.createElement("h1");
+    userH1.setAttribute("id", "userH1");
+    userH1.textContent = "Finshed"
+
+    questionDiv.appendChild(userH1);
+
+    var userP = document.createElement("p");
+    userP.setAttribute("id", "userP");
+
+    questionDiv.appendChild(userP);
+    //Remaining time w/ final score
+    if (timeLeft >= 0) {
+        var remainingTime = timeLeft;
+        var userP2 = document.createElement("p");
+        clearInterval(holdInterval);
+        userP.textContent = "The final score: " + remainingTime;
+        questionDiv.appendChild(userP2);
+    }
+
 }
