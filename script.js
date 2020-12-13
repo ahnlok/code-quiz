@@ -30,3 +30,7 @@ var questions = [
 var score = 0;
 var questionList = 0;
 
+var currentTime = document.querySelector("#time-left");
+var Timer = document.querySelector("#buttonstart");
+var questionDiv = document.querySelector("#questions");
+var wrapper = document.querySelector("#wrapper");
