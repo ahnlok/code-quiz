@@ -66,4 +66,11 @@ function render(questionList){
         var choiceUser = questions[questionList].choice;
         questionDive.textContent = questionUser;
     }
+    choiceUser.forEach(function (newItem) {
+        var listItem = document.createElement("li");
+        listItem.textContent = newItem;
+        questionDiv.appendChile(ulCreate);
+        ulCreate.appendChild(listItem);
+        listItem.addEventListener("click", (compare));
+    })
 }
