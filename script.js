@@ -4,22 +4,22 @@ var questions = [
         title: "What are the commonly used data types that Not included:",
         choice: ["string", "booleans", "alerts", "numbers"],
         answer: "alerts"
-    }
+    },
     {
         title: "What is the condition in an if/else statement is enclosed within:",
         choice: ["quotes", "curly brackets", "parenthesis", "square brakets"],
         answer: "parentheses"
-    }
+    },
     {
         title: "Arrays in Javascript can be used to store:",
         choice: ["numbers and strings", "other arrays", "booleans", "all of the above"],
         answer: "all of the above"
-    }
+    },
     {
         title: "String values must be enclosed within____when being assigned to variables.",
         choice: ["commas", "curly brackets", "quotes", "parenthesis"],
         answer: "quotes"
-    }
+    },
     {
         title: "A very useful tool for used during development and debugging for printing content to:",
         choice: ["Javascript", "terminal/bash", "for loops", "console log"],
@@ -30,7 +30,7 @@ var questions = [
 var score = 0;
 var questionList = 0;
 
-var currentTime = document.querySelector("#time-left");
+var currentTime = document.querySelector("#timeLeft");
 var timer = document.querySelector("#buttonstart");
 var questionDiv = document.querySelector("#questions");
 var wrapper = document.querySelector("#wrapper");
@@ -42,8 +42,8 @@ var createUl = document.createElement("ul");
 
 //Button for timer to responsive
 timer.addEventListener("click", function() {
-    if (holdInterval === 0){
-        holdInterval = setInterval(function(){
+    if (holdInterval === 0) {
+        holdInterval = setInterval(function() {
             timeLeft--;
             currentTime.textContent = "Time: " + timeLeft;
 
@@ -58,19 +58,19 @@ timer.addEventListener("click", function() {
 });
 
 //Rendering questions & choice to the page
-function render(questionList){
+function render(questionList) {
     questionDiv.innerHTML = "";
     createUl.innerHTML = "";
-    for (var i - 0; i < questions.length; i++) {
+    for (var i = 0; i < questions.length; i++) {
         var questionUser = questions[questionList].title;
         var choiceUser = questions[questionList].choice;
-        questionDive.textContent = questionUser;
+        questionDiv.textContent = questionUser;
     }
     choiceUser.forEach(function (newItem) {
         var listItem = document.createElement("li");
         listItem.textContent = newItem;
-        questionDiv.appendChile(ulCreate);
-        ulCreate.appendChild(listItem);
+        questionDiv.appendChild(createUl);
+        createUl.appendChild(listItem);
         listItem.addEventListener("click", (compare));
     })
 }
