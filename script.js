@@ -122,12 +122,21 @@ function allDone(){
         questionDiv.appendChild(userP2);
     }
     //Label
-    var createLabel = document.createElement("label");
-    createLabel.setAttribute("id", "createLabel");
-    createLabel.textContent = "Enter desired initials to be listed: ";
+    var makeLabel = document.createElement("label");
+    makeLabel.setAttribute("id", "makeLabel");
+    makeLabel.textContent = "Enter desired initials to be listed: ";
 
     questionDiv.appendChild(createLabel);
 
+    //Input
+    var makeInput = document.createElement("input");
+    makeInput.setAttribute("type", "text");
+    makeInput.setAttribute("id", "initials");
+    makeInput.textContent = "";
+
+    questionDiv.appendChild(makeInput);
+
+    //Submit
     
 
 }
