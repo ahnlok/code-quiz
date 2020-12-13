@@ -61,4 +61,9 @@ timer.addEventListener("click", function() {
 function render(questionList){
     questionDiv.innerHTML = "";
     createUl.innerHTML = "";
+    for (var i - 0; i < questions.length; i++) {
+        var questionUser = questions[questionList].title;
+        var choiceUser = questions[questionList].choice;
+        questionDive.textContent = questionUser;
+    }
 }
