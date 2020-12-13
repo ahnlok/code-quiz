@@ -74,3 +74,19 @@ function render(questionList){
         listItem.addEventListener("click", (compare));
     })
 }
+
+//Option to compare user choices with answer
+function compare(event){
+    var element = event.target;
+    if(element.matches("li")) {
+        var createDiv = document.createElement("div");
+        createDiv.setAttribute("id", "createDiv");
+        if(element.textContent == questions[questionList].answer){
+            score++;
+            createDiv.textContent = "You are correct! " + questions[questionList].answer; 
+        } else{
+            timeLeft = timeLeft - punish;
+            createDiv.textContent = "You are wrong, the correct answer is: " + questions[questionList].answer;
+        }
+    }
+}
