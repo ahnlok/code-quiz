@@ -8,10 +8,11 @@ clear.addEventListener("click", function() {
     localStorage.reload();
 });
 var scoreList = localStorage.getItem("scoreList");
-scoreList = JSON.parse (scoreList);
+scoreList = JSON.parse(scoreList);
 //Retrieving local storage
 if (scoreList !== null) {
     for (var i = 0; i < scoreList.length; i++) {
+        var liEl = document.createElement("li");
        liEl.textContent = scoreList[i].initials + " " + listScore[i].score;
         highScore.appendChild(liEl);
     }

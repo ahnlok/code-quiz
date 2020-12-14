@@ -6,7 +6,7 @@
     top: 20%;    
 }
 
-#buttonstart {
+#buttonStart {
     font-size: 20px;
     font-weight: bold;
     color: white;
@@ -17,13 +17,21 @@
 }
 
 #timeLeft {
-    float: right;
+    top: 0;
+    right: 0;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    background-color: aqua;
 }
 
 #questions {
     margin: 20px;
     text-align: center;
     font-weight: bold;
+    color:black;
 }
 
 #submit{
@@ -34,16 +42,34 @@
     color: white;
 }
 
-h1{
+#main-title{
     text-align: center;
 }
 
 li {
-    background-color: aqua;
+    border-style: double;
     margin-top: 10px;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     width: 75%;
+    color: black;
+    position: relative;
+}
+
+#divEl{
+    text-align: center;
+    background-color: aqua;
     color: white;
 }
 
+input {
+    width: 50;
+    border-style: double;
+    background-color: black;
+}
+
+#Submit {
+    text-align: center;
+    background-color: aqua;
+    color: white;
+}
