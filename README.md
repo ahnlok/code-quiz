@@ -1,7 +1,7 @@
 # Code Quiz
 ---
 #### Description:
-- This is a short quiz about Javascript fundamentals using HTML/CSS and JavaScript.
+- This is a short quiz about Javascript fundamentals created with HTML/CSS and JavaScript.
 ---
  ## Table of Contents:
 * [Features](#features)
