@@ -17,7 +17,7 @@
  ![codequizquestionimage](./images/codequizquestion.jpg)
  3. Once you finished all five questions, you will arrive at the "Finished" page. Type your desired initial to be recorded in "High Score" tab, then click "Submit".
  ![finishedpagimage](./images/finishedpage.jpg)
- 4. This is the "High Score" page, you will see listed initials of previous high scores. with "Previous" button, you will redirect to the main page. "Clear" button will clear all listed initials in "High Score" Page.
+ 4. This is the "High Score" page, you will see listed initials of previous high scores. with "Previous" button, you will redirect to the main page. "Clear" button will clear all the listed initials in "High Score" Page.
  ![highscorepageimage](./images/high.jpg)
 ---
  ## Contribution:
