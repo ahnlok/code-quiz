@@ -1,23 +1,28 @@
+
 //Static variables
-var highScore = document.querySelector("#highScore");
+var topScore = document.querySelector("#highScores");
 var clear = document.querySelector("#clear");
 var previous = document.querySelector("#previous");
 //Function to clear the score.
 clear.addEventListener("click", function() {
     localStorage.clear();
-    localStorage.reload();
+    location.reload();
 });
-var scoreList = localStorage.getItem("scoreList");
-scoreList = JSON.parse(scoreList);
-//Retrieving local storage
-if (scoreList !== null) {
-    for (var i = 0; i < scoreList.length; i++) {
+
+//Retrieving the list from localStorage
+var listScore = localStorage.getItem("listScore");
+listScore = JSON.parse(listScore);
+
+if (listScore !== null) {
+
+    for (var i = 0; i < listScore.length; i++) {
+
         var liEl = document.createElement("li");
-       liEl.textContent = scoreList[i].initials + " " + listScore[i].score;
-        highScore.appendChild(liEl);
+       liEl.textContent = listScore[i].initial + " " + listScore[i].score;
+        topScore.appendChild(liEl);
     }
 }
 //function to move back to index page
 previous.addEventListener("click", function() {
-    window.location.replace("index.html");
+    window.location.replace("./index.html");
 });

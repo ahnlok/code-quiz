@@ -125,12 +125,13 @@ function allDone(){
         userP.textContent = "The final score is: " + remainingTime;
         questionDiv.appendChild(userP2);
     }
+
     //Label
     var makeLabel = document.createElement("label");
     makeLabel.setAttribute("id", "makeLabel");
-    makeLabel.textContent = "Enter desired initials to be listed: ";
+    makeLabel.textContent = "Enter the desired initials to be listed: ";
 
-    questionDiv.appendChild(createLabel);
+    questionDiv.appendChild(makeLabel);
 
     //Input
     var makeInput = document.createElement("input");
@@ -152,7 +153,7 @@ function allDone(){
         var initial = makeInput.value;
 
         if(initial === null) {
-
+            console.log("No value entered");
         } else{
             var yourScore = {
                 initial: initial,
@@ -168,7 +169,7 @@ function allDone(){
             var newScore = JSON.stringify(listScore);
             localStorage.setItem("listScore", newScore);
             
-            window.location.replace("highscore.html");
+            window.location.replace("./highscore.html");
         }
     });
 }

@@ -41,7 +41,32 @@
     text-align: center;
     color: white;
 }
+#highScoreTitle{
+    position: relative;
+    font-weight: bold;
+    font-size: 60px;
+   
+}
 
+#previous {
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    background-color: aqua;
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+}
+
+#clear{
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    background-color: aqua;
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+}
 #main-title{
     text-align: center;
 }
@@ -65,11 +90,13 @@ li {
 input {
     width: 50;
     border-style: double;
-    background-color: black;
 }
 
 #Submit {
     text-align: center;
-    background-color: aqua;
+    background-color: blue;
     color: white;
+    font-weight: bold;
+    font-size: 20px; 
+    margin: 10px;
 }
